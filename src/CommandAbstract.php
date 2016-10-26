@@ -4,11 +4,11 @@ namespace Treffynnon\BinaryWrap;
 
 use Treffynnon\CmdWrap\Runners\SymfonyProcess;
 
-class CommandAbstract
+abstract class CommandAbstract implements CommandInterface
 {
-    public function __invoke($args)
+    public function __invoke(BuilderInterface $builder, ResponseInterface $response, $arguments)
     {
-        $command = $this->command(new \Treffynnon\CmdWrap\Builder, ...$args);
+        $command = $this->command($builder, ...$arguments);
         /// run it
         $sp = new SymfonyProcess();
         $lineParser = null;
@@ -18,6 +18,21 @@ class CommandAbstract
             };
         }
         $r = $sp->run($command, $lineParser);
-        return $this->parse($r->getOutput());
+        return $response->set(
+            $r->getCommand(),
+            $r->getStatus(),
+            $this->parseOutput($r->getOutput()),
+            $this->parseError($r->getError())
+        );
+    }
+
+    public function parseOutput($output)
+    {
+        return $output;
+    }
+
+    public function parseError($error)
+    {
+        return $error;
     }
 }
