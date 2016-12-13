@@ -14,7 +14,7 @@
     ],
     "require": {
         "php": ">=5.6",
-        "treffynnon/command-wrap": "dev-master"
+        "treffynnon/command-wrap": "dev-dev"
     },
     "require-dev": {
         "phpspec/phpspec": "^3.0",
