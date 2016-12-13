@@ -1,5 +1,5 @@
 {
-    "name": "Treffynnon/BinaryWrap",
+    "name": "treffynnon/binary-wrap",
     "type": "library",
     "description": "Wrap any command line binary with convenience from PHP",
     "keywords": ["binary","wrapper","linux"],
@@ -14,7 +14,7 @@
     ],
     "require": {
         "php": ">=5.6",
-        "treffynnon/cmdwrap": "dev-dev"
+        "treffynnon/command-wrap": "dev-master"
     },
     "require-dev": {
         "phpspec/phpspec": "^3.0",
