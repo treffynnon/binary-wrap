@@ -2,9 +2,9 @@
 
 namespace Treffynnon\BinaryWrap;
 
-use \Treffynnon\CmdWrap;
+use \Treffynnon\CommandWrap;
 
-class Response extends CmdWrap\Response implements ResponseInterface
+class Response extends CommandWrap\Response implements ResponseInterface
 {
 
 }

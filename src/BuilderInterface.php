@@ -2,9 +2,9 @@
 
 namespace Treffynnon\BinaryWrap;
 
-use \Treffynnon\CmdWrap;
+use \Treffynnon\CommandWrap;
 
-interface BuilderInterface extends CmdWrap\BuilderInterface
+interface BuilderInterface extends CommandWrap\BuilderInterface
 {
 
 }

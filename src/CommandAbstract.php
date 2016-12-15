@@ -2,7 +2,7 @@
 
 namespace Treffynnon\BinaryWrap;
 
-use Treffynnon\CmdWrap\Runners\SymfonyProcess;
+use Treffynnon\CommandWrap\Runners\SymfonyProcess;
 
 abstract class CommandAbstract implements CommandInterface
 {
